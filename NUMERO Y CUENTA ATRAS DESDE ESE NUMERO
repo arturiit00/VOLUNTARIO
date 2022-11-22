@@ -1,0 +1,9 @@
+# Le das un numero y te da el resto de numeros hasta el uno
+
+def numeros():
+    num=0
+    num=int(input("Dime un numero: "))
+    for cont in range(num,0,-1):
+        print(cont)
+        
+numeros()
