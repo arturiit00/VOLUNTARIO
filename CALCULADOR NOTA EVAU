@@ -1,0 +1,27 @@
+# Calcula nota de EVAU
+
+def nota_evau():
+    #Troncales
+    historia=int(input("Introduce tu nota de historia: "))
+    lengua=int(input("Introduce la nota de lengua: "))
+    mates=int(input("Introduce la nota de mates: "))
+    ingles=int(input("Introduce la nota de ingles: "))
+    suma_troncales=historia+lengua+mates+ingles
+    media_troncales=suma_troncales/4
+    print(media_troncales)
+    nmb=int(input("Introduce media de bachillerato: "))
+    porcentaje_troncales=media_troncales*0.4
+    porcentaje_nmb=nmb*0.6
+    nota_sin_optativas=porcentaje_troncales+porcentaje_nmb
+    print("Esta es tu nota de acceso sin optativas: ")
+    print(nota_sin_optativas)
+    if(nota_sin_optativas<5):
+        print("Suspendido, prueba al año que viene.")
+    else:
+        optativa_1=int(input("Introduce nota de optativa uno: "))
+        optativa_2=int(input("Introduce nota de optativa dos: "))
+        porcentaje_optativas=(optativa_1*0.2 + optativa_2*0.1)+nota_sin_optativas
+        print("Esta es tu nota de aceso completa: ")
+        print(porcentaje_optativas)
+
+nota_evau()
