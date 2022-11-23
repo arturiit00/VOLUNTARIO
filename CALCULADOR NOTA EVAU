@@ -2,6 +2,7 @@
 
 def nota_evau():
     #Troncales
+    print("TU NOTA DE ACESO A LAL CARRERA")
     historia=int(input("Introduce tu nota de historia: "))
     lengua=int(input("Introduce la nota de lengua: "))
     mates=int(input("Introduce la nota de mates: "))
@@ -16,12 +17,15 @@ def nota_evau():
     print("Esta es tu nota de acceso sin optativas: ")
     print(nota_sin_optativas)
     if(nota_sin_optativas<5):
-        print("Suspendido, prueba al año que viene.")
+        print("Suspendido, no hay opción a optativas, prueba al año que viene.")
     else:
         optativa_1=int(input("Introduce nota de optativa uno: "))
+        ponderacion_1=int(input("¿Cuanto te pondera, 1 o 2?: "))
         optativa_2=int(input("Introduce nota de optativa dos: "))
-        porcentaje_optativas=(optativa_1*0.2 + optativa_2*0.1)+nota_sin_optativas
+        ponderacion_2=int(input("¿Cuanto te pondera, 1 o 2?: "))
+        porcentaje_optativas=(optativa_1*(ponderacion_1/10) + optativa_2*(ponderacion_2/10))+nota_sin_optativas
         print("Esta es tu nota de aceso completa: ")
         print(porcentaje_optativas)
+        
 
 nota_evau()
